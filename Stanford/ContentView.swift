@@ -9,82 +9,114 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var emojisCount = 8
+    // MARK: - Button
     
-    var emojis = ["🚗", "🚕", "🚌", "🏎", "🚑", "🚎",
-                  "🚒", "🚜", "🦯", "🦽", "🛻", "🚐",
-                  "🦼", "🚲", "🛵", "🛺", "🏍", "🚔",
-                  "🚡", "🚠", "🚇", "🚁", "🛳", "✈️"]
-    
-    var remove: some View {
+    var vehicles: some View {
         Button {
-            if emojisCount > 1 {
-                emojisCount -= 1
-            }
+            emojis = emojisVehicles.shuffled()
         } label: {
-            Image(systemName: "minus.circle")
+            VStack {
+                Image(systemName: "tram").font(.largeTitle)
+                Text("Vehicles")
+            }
         }
     }
     
-    var add: some View {
+    var smileys: some View {
         Button {
-            if emojisCount < emojis.count {
-                emojisCount += 1
-            }
+            emojis = emojisSmileys.shuffled()
         } label: {
-            Image(systemName: "plus.circle")
+            VStack {
+                Image(systemName: "face.smiling").font(.largeTitle)
+                Text("Smileys")
+            }
         }
     }
+    
+    var fruits: some View {
+        Button {
+            emojis = emojisFruits.shuffled()
+        } label: {
+            VStack {
+                Image(systemName: "leaf").font(.largeTitle)
+                Text("Fruits")
+            }
+        }
+    }
+    
+    var flags: some View {
+        Button {
+            emojis = emojiFlags.shuffled()
+        } label: {
+            VStack {
+                Image(systemName: "flag").font(.largeTitle)
+                Text("Flags")
+            }
+        }
+    }
+    
+    // MARK: - Properties
+    
+    @State var emojisVehicles = ["🦼", "🛴", "🚲", "🛵", "🏍", "🚨",
+                                 "🚍", "🚔", "🚘", "🚖", "🚡", "🚠",
+                                 "🚟", "🚃", "🚋", "🚞", "🚝", "🚄",
+                                 "🚅", "🚇", "✈️", "🛩", "🛰", "🚀"]
+    
+    @State var emojisSmileys = ["😇", "😎", "🥸", "😛", "🤣", "☺️",
+                                "🤩", "😡", "😤", "🥳", "😟", "😞"]
+    
+    @State var emojisFruits = ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌",
+                               "🍉", "🍇", "🍓", "🫐", "🍈", "🍒",
+                               "🍑", "🥭", "🍍", "🥥", "🥝", "🥑"]
+    
+    @State var emojiFlags = ["🏴‍☠️", "🏳️", "🏴", "🚩", "🏁", "🏳️‍🌈",
+                             "🇺🇳", "🇧🇪", "🇧🇷", "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🇩🇪", "🇪🇸",
+                             "🇳🇴", "🇰🇷", "🇷🇺", "🇺🇸"]
+    
+    @State var emojis = ["🦼", "🛴", "🚲", "🛵", "🏍", "🚨",
+                         "🚍", "🚔", "🚘", "🚖", "🚡", "🚠",
+                         "🚟", "🚃", "🚋", "🚞", "🚝", "🚄",
+                         "🚅", "🚇", "✈️", "🛩", "🛰", "🚀"]
+    
+    // MARK: - UI
     
     var body: some View {
+        
         VStack {
+            
+            Text("Memorize!").font(.largeTitle)
+            
+            Spacer()
+            
             ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-                    ForEach(emojis[0..<emojisCount], id: \.self) { emoji in
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                    ForEach(emojis[0..<emojis.count], id: \.self) { emoji in
                         CardView(content: emoji)
                             .aspectRatio(2/3, contentMode: .fit)
                     }
                 }
             }
-            .foregroundColor(.orange)
+            .foregroundColor(.red)
             
             Spacer()
             
             HStack {
-                remove
+                vehicles
                 Spacer()
-                add
+                smileys
+                Spacer()
+                fruits
+                Spacer()
+                flags
             }
-            .font(.largeTitle)
+            .font(.title2)
             .padding(.horizontal)
         }
         .padding(.horizontal)
     }
 }
 
-struct CardView: View {
-    
-    var content: String
-    
-    let shape = RoundedRectangle(cornerRadius: 20)
-    
-    @State var isFaceUp: Bool = true
-    
-    var body: some View {
-        ZStack {
-            if isFaceUp {
-                shape.fill().foregroundColor(.white)
-                shape.stroke(lineWidth: 3)
-                Text(content).font(.largeTitle)
-            } else {
-                shape.fill()
-            }
-        }
-        .onTapGesture {
-            isFaceUp = !isFaceUp
-        }
-    }
-}
+    // MARK: - Preview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

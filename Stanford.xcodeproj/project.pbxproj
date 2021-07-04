@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8936E4712692568F00090676 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936E4702692568F00090676 /* ContentView.swift */; };
+		8936E475269257DB00090676 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936E474269257DB00090676 /* CardView.swift */; };
 		89B13D2126922EE800B299AA /* StanfordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B13D2026922EE800B299AA /* StanfordApp.swift */; };
-		89B13D2326922EE800B299AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B13D2226922EE800B299AA /* ContentView.swift */; };
 		89B13D2526922EE900B299AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B13D2426922EE900B299AA /* Assets.xcassets */; };
 		89B13D2826922EE900B299AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B13D2726922EE900B299AA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8936E4702692568F00090676 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8936E474269257DB00090676 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		89B13D1D26922EE800B299AA /* Stanford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanford.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B13D2026922EE800B299AA /* StanfordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordApp.swift; sourceTree = "<group>"; };
-		89B13D2226922EE800B299AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89B13D2426922EE900B299AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89B13D2726922EE900B299AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89B13D2926922EE900B299AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				89B13D2026922EE800B299AA /* StanfordApp.swift */,
-				89B13D2226922EE800B299AA /* ContentView.swift */,
+				8936E4702692568F00090676 /* ContentView.swift */,
+				8936E474269257DB00090676 /* CardView.swift */,
 				89B13D2426922EE900B299AA /* Assets.xcassets */,
 				89B13D2926922EE900B299AA /* Info.plist */,
 				89B13D2626922EE900B299AA /* Preview Content */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89B13D2326922EE800B299AA /* ContentView.swift in Sources */,
+				8936E4712692568F00090676 /* ContentView.swift in Sources */,
+				8936E475269257DB00090676 /* CardView.swift in Sources */,
 				89B13D2126922EE800B299AA /* StanfordApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
