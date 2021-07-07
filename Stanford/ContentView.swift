@@ -69,9 +69,7 @@ struct ContentView: View {
                                "🍉", "🍇", "🍓", "🫐", "🍈", "🍒",
                                "🍑", "🥭", "🍍", "🥥", "🥝", "🥑"]
     
-    @State var emojiFlags = ["🏴‍☠️", "🏳️", "🏴", "🚩", "🏁", "🏳️‍🌈",
-                             "🇺🇳", "🇧🇪", "🇧🇷", "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🇩🇪", "🇪🇸",
-                             "🇳🇴", "🇰🇷", "🇷🇺", "🇺🇸"]
+    @State var emojiFlags = ["🏴‍☠️", "🏳️", "🏴", "🚩", "🏁", "🏳️‍🌈"]
     
     @State var emojis = ["🦼", "🛴", "🚲", "🛵", "🏍", "🚨",
                          "🚍", "🚔", "🚘", "🚖", "🚡", "🚠",
@@ -89,7 +87,7 @@ struct ContentView: View {
             Spacer()
             
             ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: widthThatBestFits(cardCount: emojis.count)))]) {
                     ForEach(emojis[0..<emojis.count], id: \.self) { emoji in
                         CardView(content: emoji)
                             .aspectRatio(2/3, contentMode: .fit)
@@ -113,6 +111,18 @@ struct ContentView: View {
             .padding(.horizontal)
         }
         .padding(.horizontal)
+    }
+    
+    // MARK: - Methods
+    
+    func widthThatBestFits(cardCount: Int) -> CGFloat {
+        if cardCount < 7 {
+            return 120
+        } else if cardCount < 13 {
+            return 80
+        } else {
+            return 65
+        }
     }
 }
 
