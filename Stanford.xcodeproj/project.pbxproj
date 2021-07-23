@@ -14,6 +14,7 @@
 		89B13D2326922EE800B299AA /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B13D2226922EE800B299AA /* EmojiMemoryGameView.swift */; };
 		89B13D2526922EE900B299AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B13D2426922EE900B299AA /* Assets.xcassets */; };
 		89B13D2826922EE900B299AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B13D2726922EE900B299AA /* Preview Assets.xcassets */; };
+		89C6926826AAC4560095A03D /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6926726AAC4560095A03D /* Cardify.swift */; };
 		89FF435F26A991B3008BA9F7 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF435E26A991B3008BA9F7 /* AspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		89B13D2426922EE900B299AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89B13D2726922EE900B299AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89B13D2926922EE900B299AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89C6926726AAC4560095A03D /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		89FF435E26A991B3008BA9F7 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				89B13D2026922EE800B299AA /* StanfordApp.swift */,
 				89B13D2226922EE800B299AA /* EmojiMemoryGameView.swift */,
+				89C6926726AAC4560095A03D /* Cardify.swift */,
 				89649EB426A9B16400A30F06 /* Pie.swift */,
 				89FF435E26A991B3008BA9F7 /* AspectVGrid.swift */,
 				89063E732692619500102C8A /* MemoryGame.swift */,
@@ -152,6 +155,7 @@
 			files = (
 				89649EB526A9B16400A30F06 /* Pie.swift in Sources */,
 				89063E742692619500102C8A /* MemoryGame.swift in Sources */,
+				89C6926826AAC4560095A03D /* Cardify.swift in Sources */,
 				89B13D2326922EE800B299AA /* EmojiMemoryGameView.swift in Sources */,
 				89B13D2126922EE800B299AA /* StanfordApp.swift in Sources */,
 				89FF435F26A991B3008BA9F7 /* AspectVGrid.swift in Sources */,
